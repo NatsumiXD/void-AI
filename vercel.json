@@ -1,11 +1,11 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "./server/main.py",
       "use": "@vercel/python",
       "config": {
-        "handler": "main:app",
-        "runtime": "python3.10"
+        "handler": "main:app"
       }
     }
   ],
