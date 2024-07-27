@@ -6,8 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import os
 
-if not os.path.exists("data"):
-    os.mkdir("data")
+# if not os.path.exists("data"):
+#     os.mkdir("data")
 
 app = FastAPI()
 app.add_middleware(
