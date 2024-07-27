@@ -1,0 +1,12 @@
+{
+    "wifi": {
+        "ssid": "1",
+        "password": "1"
+    },
+    "info": {
+        "status": "changed",
+        "code": 114,
+        "mid": "1",
+        "time": "2024-07-27 14:31:32"
+    }
+}
