@@ -16,6 +16,9 @@ app.add_middleware(
     allow_headers=["*"],  # 允许的头部列表
 )
 
+@app.get("/")
+async def root():
+    return {"status": "success","code": 0,"message":"Launch successful."}
 
 @app.get("/wifi/data/get")
 async def get_wifi_data(mid: str):
