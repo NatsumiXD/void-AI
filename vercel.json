@@ -1,17 +1,16 @@
 {
-    "builds": [
-      {
-        "src": "./server/main.py",
-        "use": "@vercel/python",
-        "config": {
-          "handler": "main:app"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "./server/main.py"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "./server/main.py",
+      "use": "@vercel/python",
+      "config": { "handler": "server.main:app" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "./server/main.py"
+    }
+  ]
+}
