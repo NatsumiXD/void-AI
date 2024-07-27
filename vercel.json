@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "./server/main.py",
-      "use": "@vercel/python",
-      "config": {
-        "handler": "main:app"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
