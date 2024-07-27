@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "preview": "vercel --preview"
+  },
+  "devDependencies": {
+    "@vercel/python": "^3.1.65"
+  }
+}
