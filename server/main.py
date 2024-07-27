@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from datetime import datetime
-import hex
+import hextt
 import json
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
@@ -30,9 +30,9 @@ async def get_wifi_data(mid: str):
 
 @app.get("/wifi/data/send")
 async def send_wifi_data(ssid: str, password: str, mid: str):
-    ssid_decode = hex.hex_to_text(ssid)
-    password_decode = hex.hex_to_text(password)
-    mid_decode = hex.hex_to_text(mid)
+    ssid_decode = hextt.hex_to_text(ssid)
+    password_decode = hextt.hex_to_text(password)
+    mid_decode = hextt.hex_to_text(mid)
     with open(f"./data/{mid}.json", "w", encoding="UTF-8") as f:
         data = {
             "wifi": {
@@ -64,7 +64,7 @@ async def send_wifi_data_gui():
 
 @app.get("/wifi/data/reset")
 async def reset_wifi_data(mid: str):
-    mid_decode = hex.hex_to_text(mid)
+    mid_decode = hextt.hex_to_text(mid)
     with open(f"./data/{mid}.json", "w", encoding="UTF-8") as f:
         data = {
             "wifi": {
